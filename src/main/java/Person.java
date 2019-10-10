@@ -1,5 +1,18 @@
 public class Person {
-    private String name;
 
-    Mobile mobileOfPerson = new Mobile();
+    Boolean changePhone = false;
+    Mobile personPhone = new Mobile();
+
+    public void setChangePhone(Boolean changePhone) {
+        this.changePhone = changePhone;
+    }
+
+    public void usePhone(){
+        if(changePhone){
+            personPhone = new IPhone();
+        }else{
+            personPhone = new Android();
+        }
+    }
+
 }
